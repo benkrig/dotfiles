@@ -1,6 +1,6 @@
 set number " line numbers
 set noswapfile " no .swp files
-
+set showcmd " show current typed cmd
 call plug#begin()
 Plug 'morhetz/gruvbox' " theme
 Plug 'psf/black' " python formatting
@@ -8,6 +8,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 colorscheme gruvbox
@@ -27,8 +28,8 @@ if bufwinnr(1)
     map > <C-W>>
 endif
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
